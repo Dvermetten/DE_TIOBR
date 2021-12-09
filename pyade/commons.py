@@ -131,7 +131,7 @@ def apply_fitness(population: np.ndarray,
     if opts is None:
         temp = np.array([func(individual) for individual in population])
         if _write_output:
-            print(f"!{func.state.current_best_internal.y}!")
+            print(f"!{func.state.current_best.y - func.objective.y}!")
         return temp
     else:
         return np.array([func(individual, opts) for individual in population])
