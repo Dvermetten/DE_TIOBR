@@ -1,10 +1,20 @@
 This repository contains code accompanying the paper "The Importance of Being Restrained", in particular for section 6 of the paper.
 This code can be viewed in terms of the 4 types of artifacts as described in the reproducibility guidelines of Evolutionary Computation Journal
 
-## Pre-processing code for section 6:
-For the results shown in section 6, the code used to access the function-instances is IOHexperimenter, specifically version "ioh==0.3.2.4" used with python 3.8.10. All experimental conditions and scripts used for parameter settings are integraded directly in the algorithm code
+## Pre-processing and algorithm code for section4:
+For the results shown in section 4, the code used to access both the function f0 and the DE algorithm is designed in the SOS-platform, with the full code and reproduction steps avaialble at https://github.com/facaraff/SOS/releases/tag/ECJ-ReproducibilityInEC
+The files resulting from this process are quite large, and are thus only included in the zenodo archive of this project LINK HERE.
 
-## Algorithm code for section 6:
+## Processing code for section 4:
+For the processing of the f0-based files is done in 'process_f0.ipyb' notebook, where the SOS-based txt-files are processed into csv-files with the needed information.  
+
+## Presentation code for section 4:
+The csv-files generated from the previous header are used in 'visualize_f0' notebook to create the figures as shown in the paper. In additon to the figures from the paper, a large number of additional figure types can be generated using this code. These figures are also included in the Figshare repository of this project, available LINK HERE. 
+
+## Pre-processing code for section 5:
+For the results shown in section 5, the code used to access the function-instances is IOHexperimenter, specifically version "ioh==0.3.2.4" used with python 3.8.10. All experimental conditions and scripts used for parameter settings are integraded directly in the algorithm code
+
+## Algorithm code for section 5:
 We make use of pyade (https://github.com/xKuZz/pyade), but with a modified version (modified only in terms of initialization and SDIS + some output options). 
 The modified code can be found on the github page, in the folder 'pyade'. 
 The code used to generate the benchmark data can be found in the script 'benchmark_pyade.py'. Note that because of the original design of pyade, this script can only be executed when in a folder where 'pyade'-folder is included as a subfolder.
@@ -14,13 +24,13 @@ To integrate the tracking of POIS and diversity, the file 'commons.py' in the py
 The in-between results are made available as well, in a zenodo repository (). The folder 'benchmark-data' contains the data from the benchmarking stage, in both raw IOH-format as well as processed rds-files generated with IOHanalyzer (these have also been made avaialbe on the IOHanalyzer GUI, when setting datasource to pyade).
 The folder 'POIS_data' contains both the raw output-logs as well as the processed pickled dictionaries as described in the next section.
 
-## Processing code for section 6:
+## Processing code for section 5:
 For the processing of benchmark data, IOHanalyzer is used (version 0.1.6.1). As mentioned previously, the processed data is avialable on zenodo and on the GUI. 
 For the processing of the raw POIS-data, we use the 'process_POIS' notebook, which turns the raw text-files into pickled dictionaries containing corrections, diversity, fitness and population size.
 
-## Presentation code for section 6:
+## Presentation code for section 5:
 For the benchmark data, we make use of the standard GUI of IOHanalyzer (version 0.1.6.1). The multi-function plots are generated using the 'multi_function_layout.rds' settings, which can be uploaded in the 'settings' tab of IOHanalyzer. The ECDF plots use default settings. 
 
-For the POIS-based data, the notebook 'POIS_analysis' is used. This contains the functions needed to generate all plots based on the pickled dictionaries from the previous section. 
+For the POIS-based data (including the diversity), the notebook 'POIS_analysis' is used. This contains the functions needed to generate all plots based on the pickled dictionaries from the previous section. 
 
 ## Citation information
