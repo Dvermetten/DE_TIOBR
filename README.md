@@ -1,7 +1,7 @@
-This repository contains code accompanying the paper "The Importance of Being Restrained", in particular for section 6 of the paper.
+This repository contains code accompanying the paper "The Importance of Being Restrained".
 This code can be viewed in terms of the 4 types of artifacts as described in the reproducibility guidelines of Evolutionary Computation Journal
 
-## Pre-processing and algorithm code for section 5:
+## Pre-processing and algorithm code for section 4:
 
 The symbolic computations and the graphical illustrations corresponding to the theoretical analysis (section 4) have been done using Wolfram Mathematica 12.1.1.0 and are included in the following notebooks (readable also using Wolfram Player - https://www.wolfram.com/player)
 
