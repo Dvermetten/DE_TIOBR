@@ -1,5 +1,7 @@
 import numpy as np
 from typing import Callable, Union, List, Tuple, Any
+from scipy import spatial
+from copy import copy
 
 _write_output = True
 
@@ -42,6 +44,7 @@ def correct_bounds(
     if _write_output:
         print(n_out_of_bounds)
     if n_out_of_bounds == 0 or correction_method is None:
+        print('#2') #To be converted to nan afterwards
         return x, n_out_of_bounds
 
     try:
@@ -51,7 +54,7 @@ def correct_bounds(
 #     print(out_of_bounds)
     ub, lb = np.tile(ub, n)[out_of_bounds], np.tile(lb, n)[out_of_bounds]
     y = (x[out_of_bounds] - lb) / (ub - lb)
-
+    x_pre = copy(x)
     if correction_method == "mirror":
         x[out_of_bounds] = lb + (ub - lb) * np.abs(
             y - np.floor(y) - np.mod(np.floor(y), 2)
@@ -69,6 +72,9 @@ def correct_bounds(
     else:
         raise ValueError(f"Unknown argument: {correction_method} for correction_method")
 #     print(correction_method, n_out_of_bounds)
+
+    if _write_output:
+        print(f"#{1 - spatial.distance.cosine(x,x_pre)}")
     return x, n_out_of_bounds
 
 def keep_bounds(population: np.ndarray,
