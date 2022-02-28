@@ -1,7 +1,7 @@
 This repository contains code accompanying the paper "The Importance of Being Restrained".
-This code can be viewed in terms of the 4 types of artifacts as described in the reproducibility guidelines of Evolutionary Computation Journal, and is split on a per-section basis.
+This code can be viewed in terms of the 4 types of artifacts as described in the reproducibility guidelines of the Evolutionary Computation journal, and is split on a per-section basis.
 
-The other artefacts (data, figures etc) can be found on zenodo at 10.5281/zenodo.5900705. The full citation information can be found in the last section of this readme.
+The other artefacts (data, figures etc.) can be found on zenodo at https://doi.org/10.5281/zenodo.5900705. The full citation information can be found in the last section of this readme.
 
 
 ## Pre-processing and algorithm code for section 4:
@@ -25,17 +25,16 @@ It contains the symbolic computation used to find sufficient conditions under wh
 It contains the generation of the plots corresponding to the evolution of the population diversity (quantified using standard deviation averaged over all components) based on the theoretical estimations of the variance obtained in Section 4.4 for saturation, uniform reinitialization and mirroring. The meaning of the used variables and the assumptions under which the results have been derived are specified as comments in the notebook.
 
 ## Pre-processing and algorithm code for section 5:
-For the results shown in section 5, the code used to access both the function f0 and the DE algorithm is designed in the SOS-platform, with the full code and reproduction steps avaialble at https://github.com/facaraff/SOS/releases/tag/ECJ-ReproducibilityInEC
-The files resulting from this process are quite large, and are thus only included in the zenodo archive of this project LINK HERE.
+For the results shown in section 5, the code used to access both the function f0 and the DE algorithm is designed in the SOS-platform, with the full code and reproduction steps available at https://github.com/facaraff/SOS/releases/tag/ECJ-ReproducibilityInEC. The files resulting from this process are quite large, and are thus only included in the zenodo archive of this project LINK HERE.
 
 ## Processing code for section 5:
 For the processing of the f0-based files is done in 'process_f0.ipyb' notebook, where the SOS-based txt-files are processed into csv-files with the needed information.  
 
 ## Presentation code for section 5:
-The csv-files generated from the previous header are used in 'visualize_f0' notebook to create the figures as shown in the paper. In additon to the figures from the paper, a large number of additional figure types can be generated using this code. These figures are also included in the Figshare repository of this project, available LINK HERE. 
+The csv-files generated from the previous header are used in 'visualize_f0' notebook to create the figures as shown in the paper. In addition to the figures from the paper, a large number of additional figure types can be generated using this code. These figures are also included in the Figshare repository of this project, available at https://doi.org/10.6084/m9.figshare.18319394.v1.
 
 ## Pre-processing code for section 6:
-For the results shown in section 6, the code used to access the function-instances is IOHexperimenter, specifically version "ioh==0.3.2.4" used with python 3.8.10. All experimental conditions and scripts used for parameter settings are integraded directly in the algorithm code
+For the results shown in section 6, the code used to access the function-instances is IOHexperimenter, specifically version "ioh==0.3.2.4" used with python 3.8.10. All experimental conditions and scripts used for parameter settings are integrated directly in the algorithm code
 
 ## Algorithm code for section 6:
 We make use of pyade (https://github.com/xKuZz/pyade), but with a modified version (modified only in terms of initialization and SDIS + some output options). 
@@ -44,11 +43,11 @@ The code used to generate the benchmark data can be found in the script 'benchma
 
 To integrate the tracking of POIS and diversity, the file 'commons.py' in the pyade-folder contains a trigger (_write_output) determining whether to write output or not. This is used to collect data, as a more conventional way of storing data would require a full overhaul of the design of each of the included DE-versions. For collecting the POIS data, this trigger should be True, which causes the relevant data to be printed to standard output, which can then be captured into a file (the included 'generate_POIS' notebook shows this process). These files can be processed with the code described in the next section. 
 
-The in-between results are made available as well, in a zenodo repository (). The folder 'benchmark-data' contains the data from the benchmarking stage, in both raw IOH-format as well as processed rds-files generated with IOHanalyzer (these have also been made avaialbe on the IOHanalyzer GUI, when setting datasource to pyade).
+The in-between results are made available as well, in a zenodo repository (). The folder 'benchmark-data' contains the data from the benchmarking stage, in both raw IOH-format as well as processed rds-files generated with IOHanalyzer (these have also been made available on the IOHanalyzer GUI, when setting datasource to pyade).
 The folder 'POIS_data' contains both the raw output-logs as well as the processed pickled dictionaries as described in the next section.
 
 ## Processing code for section 6:
-For the processing of benchmark data, IOHanalyzer is used (version 0.1.6.1). As mentioned previously, the processed data is avialable on zenodo and on the GUI. 
+For the processing of benchmark data, IOHanalyzer is used (version 0.1.6.1). As mentioned previously, the processed data is available on zenodo and on the GUI. 
 For the processing of the raw POIS-data, we use the 'process_POIS' notebook, which turns the raw text-files into pickled dictionaries containing corrections, diversity, fitness and population size.
 
 ## Presentation code for section 6:
@@ -70,7 +69,7 @@ Citation for the data and code:
   year         = 2022,
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.5900706},
-  url          = {https://doi.org/10.5281/zenodo.5900706}
+  howpublished = {\url{https://doi.org/10.5281/zenodo.5900706}}
 }
 
 Citation for the paper:
