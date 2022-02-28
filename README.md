@@ -1,5 +1,8 @@
 This repository contains code accompanying the paper "The Importance of Being Restrained".
-This code can be viewed in terms of the 4 types of artifacts as described in the reproducibility guidelines of Evolutionary Computation Journal
+This code can be viewed in terms of the 4 types of artifacts as described in the reproducibility guidelines of Evolutionary Computation Journal, and is split on a per-section basis.
+
+The other artefacts (data, figures etc) can be found on zenodo at 10.5281/zenodo.5900705. The full citation information can be found in the last section of this readme.
+
 
 ## Pre-processing and algorithm code for section 4:
 
@@ -54,3 +57,21 @@ For the benchmark data, we make use of the standard GUI of IOHanalyzer (version 
 For the POIS-based data (including the diversity), the notebook 'POIS_analysis' is used. This contains the functions needed to generate all plots based on the pickled dictionaries from the previous section. 
 
 ## Citation information
+
+Citation for the data and code:
+@dataset{diederick_vermetten_2022_5900706,
+  author       = {Diederick Vermetten and
+                  Anna V. Kononova and
+                  Fabio Caraffini and
+                  Madalina Mitran and
+                  Daniela Zaharie},
+  title        = {The Importance of Being Constrained - Dataset},
+  month        = jan,
+  year         = 2022,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.5900706},
+  url          = {https://doi.org/10.5281/zenodo.5900706}
+}
+
+Citation for the paper:
+To appear later
