@@ -43,7 +43,7 @@ The code used to generate the benchmark data can be found in the script 'benchma
 
 To integrate the tracking of POIS and diversity, the file 'commons.py' in the pyade-folder contains a trigger (_write_output) determining whether to write output or not. This is used to collect data, as a more conventional way of storing data would require a full overhaul of the design of each of the included DE-versions. For collecting the POIS data, this trigger should be True, which causes the relevant data to be printed to standard output, which can then be captured into a file (the included 'generate_POIS' notebook shows this process). These files can be processed with the code described in the next section. 
 
-The in-between results are made available as well, in a zenodo repository (). The folder 'benchmark-data' contains the data from the benchmarking stage, in both raw IOH-format as well as processed rds-files generated with IOHanalyzer (these have also been made available on the IOHanalyzer GUI, when setting datasource to pyade).
+The in-between results are made available as well in the zenodo repository. The folder 'benchmark-data' contains the data from the benchmarking stage, in both raw IOH-format as well as processed rds-files generated with IOHanalyzer (these have also been made available on the IOHanalyzer GUI, when setting datasource to pyade).
 The folder 'POIS_data' contains both the raw output-logs as well as the processed pickled dictionaries as described in the next section.
 
 ## Processing code for section 6:
