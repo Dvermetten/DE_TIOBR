@@ -14,7 +14,7 @@ It contains the visualization of the evolution of the probability to generate co
 
 ### DE_EmpiricalEstimationViolationProbability.nb
 
-Basic implementation of DE/rand/1 combined with five correction strategies: saturation, uniform reinitialization, mirror, toroidal, halfway.  The bound violation probability is estimated as relative frequency of components of the mutant which are generated outside the bounding box (total number of cases divided by the product between problem size, populations size, number of generations and number of independent runs)
+Basic implementation of DE/rand/1 combined with five correction strategies: saturation, uniform, mirror, toroidal, halfway-to-violated-bounds. The bound violation probability is estimated as relative frequency of components of the mutant which are generated outside the bounding box (total number of cases divided by the product between problem size, populations size, number of generations and number of independent runs)
 
 ### CosineSimilarity.nb
 
@@ -22,10 +22,10 @@ It contains the symbolic computation used to find sufficient conditions under wh
 
 ### PopulationDiversity.nb
 
-It contains the generation of the plots corresponding to the evolution of the population diversity (quantified using standard deviation averaged over all components) based on the theoretical estimations of the variance obtained in Section 4.4 for saturation, uniform reinitialization and mirroring. The meaning of the used variables and the assumptions under which the results have been derived are specified as comments in the notebook.
+It contains the generation of the plots corresponding to the evolution of the population diversity (quantified using standard deviation averaged over all components) based on the theoretical estimations of the variance obtained in Section 4.4 for saturation, uniform and mirroring. The meaning of the used variables and the assumptions under which the results have been derived are specified as comments in the notebook.
 
 ## Pre-processing and algorithm code for section 5:
-For the results shown in section 5, the code used to access both the function f0 and the DE algorithm is designed in the SOS-platform, with the full code and reproduction steps available at https://github.com/facaraff/SOS/releases/tag/ECJ-ReproducibilityInEC. The files resulting from this process are quite large, and are thus only included in the zenodo archive of this project LINK HERE.
+For the results shown in section 5, the code used to access both the function f0 and the DE algorithm is designed in the SOS-platform, with the full code and reproduction steps available at https://github.com/facaraff/SOS/releases/tag/ECJ-ReproducibilityInEC. The files resulting from this process are quite large, and are thus only included in the (aforementioned) zenodo archive of this project.
 
 ## Processing code for section 5:
 For the processing of the f0-based files is done in 'process_f0.ipyb' notebook, where the SOS-based txt-files are processed into csv-files with the needed information.  
