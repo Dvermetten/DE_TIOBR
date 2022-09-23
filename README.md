@@ -34,6 +34,23 @@ For the processing of the f0-based files is done in 'process_f0.ipyb' notebook, 
 The csv-files generated from the previous header are used in 'visualize_f0' notebook to create the figures as shown in the paper. In addition to the figures from the paper, a large number of additional figure types can be generated using this code. These figures are also included in the Figshare repository of this project, available at https://doi.org/10.6084/m9.figshare.18319394.v1.
 
 ## Pre-processing code for section 6:
+For the results shown in section 6, the code used to access the function-instances is IOHexperimenter, specifically version "ioh==0.3.2.4" used with python 3.8.10. All experimental conditions and scripts used for parameter settings are integraded directly in the algorithm code
+
+## Algorithm code for section 6:
+We make use of ModDE (https://github.com/Dvermetten/ModDE), 
+The code used to generate the benchmark data can be found in the notebook 'Generate_DATA_BBOB.ipynb'. This file should be located in the same directory as the ModDe code during execution.
+
+The in-between results are made available as well, in the zenodo repository of this project. The folder 'BBOB-DE' contains the data from the benchmarking stage, in both raw IOH-format as well as processed rds-files generated with IOHanalyzer (these have also been made avaialbe on the IOHanalyzer GUI, when setting datasource to TIOBR). The R-notebook 'Process_BBOB.ipynb' shows the script used to generate the rds-files.
+
+## Processing code for section 6:
+For the processing of benchmark data, IOHanalyzer is used (version 0.1.6.3). As mentioned previously, the processed data is avialable on zenodo and on the GUI. 
+
+## Presentation code for section 6:
+For the benchmark data, we make use of the standard GUI of IOHanalyzer (version 0.1.6.1). The multi-function plots are generated using the 'multi_function_layout.rds' settings, which can be uploaded in the 'settings' tab of IOHanalyzer. The ECDF plots use default settings, with target option set to 'bbob'. 
+
+For the POIS-based data (including the diversity), the notebook 'Visualize_BBOB' is used. This contains the functions needed to generate all plots based on the  rds files described in the previous section.
+
+<!-- ## Pre-processing code for section 6:
 For the results shown in section 6, the code used to access the function-instances is IOHexperimenter, specifically version "ioh==0.3.2.4" used with python 3.8.10. All experimental conditions and scripts used for parameter settings are integrated directly in the algorithm code
 
 ## Algorithm code for section 6:
@@ -53,7 +70,7 @@ For the processing of the raw POIS-data, we use the 'process_POIS' notebook, whi
 ## Presentation code for section 6:
 For the benchmark data, we make use of the standard GUI of IOHanalyzer (version 0.1.6.1). The multi-function plots are generated using the 'multi_function_layout.rds' settings, which can be uploaded in the 'settings' tab of IOHanalyzer. The ECDF plots use default settings. 
 
-For the POIS-based data (including the diversity), the notebook 'POIS_analysis' is used. This contains the functions needed to generate all plots based on the pickled dictionaries from the previous section. 
+For the POIS-based data (including the diversity), the notebook 'POIS_analysis' is used. This contains the functions needed to generate all plots based on the pickled dictionaries from the previous section.  -->
 
 ## Citation information
 
