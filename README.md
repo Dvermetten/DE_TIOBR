@@ -3,7 +3,7 @@ This code can be viewed in terms of the 4 types of artifacts as described in the
 
 The other artefacts (data, figures etc.) can be found on zenodo at https://doi.org/10.5281/zenodo.5900705. The full citation information can be found in the last section of this readme.
 
-
+# Section 4
 ## Pre-processing and algorithm code for section 4:
 
 The symbolic computations and the graphical illustrations corresponding to the theoretical analysis (section 4) have been done using Wolfram Mathematica 12.1.1.0 and are included in the following notebooks (readable also using Wolfram Player - https://www.wolfram.com/player)
@@ -24,31 +24,38 @@ It contains the symbolic computation used to find sufficient conditions under wh
 
 It contains the generation of the plots corresponding to the evolution of the population diversity (quantified using standard deviation averaged over all components) based on the theoretical estimations of the variance obtained in Section 4.4 for saturation, uniform and mirroring. The meaning of the used variables and the assumptions under which the results have been derived are specified as comments in the notebook.
 
+# Section 5
+
 ## Pre-processing and algorithm code for section 5:
 For the results shown in section 5, the code used to access both the function f0 and the DE algorithm is designed in the SOS-platform, with the full code and reproduction steps available at https://github.com/facaraff/SOS/releases/tag/ECJ-ReproducibilityInEC. The files resulting from this process are quite large, and are thus only included in the (aforementioned) zenodo archive of this project.
 
-## Processing code for section 5:
+## Processing + Visualization
+
+The data from f0 is processed and visualized using python notebooks, which can be opened e.g. using jupyter (https://jupyter.org/) or online using google collab (https://colab.research.google.com/).
+
+### Processing code for section 5:
 For the processing of the f0-based files is done in 'process_f0.ipyb' notebook, where the SOS-based txt-files are processed into csv-files with the needed information.  
 
-## Presentation code for section 5:
+### Presentation code for section 5:
 The csv-files generated from the previous header are used in 'visualize_f0' notebook to create the figures as shown in the paper. In addition to the figures from the paper, a large number of additional figure types can be generated using this code. These figures are also included in the Figshare repository of this project, available at https://doi.org/10.6084/m9.figshare.18319394.v1.
 
+# Section 6
 ## Pre-processing code for section 6:
 For the results shown in section 6, the code used to access the function-instances is IOHexperimenter, specifically version "ioh==0.3.2.4" used with python 3.8.10. All experimental conditions and scripts used for parameter settings are integraded directly in the algorithm code
 
 ## Algorithm code for section 6:
-We make use of ModDE (https://github.com/Dvermetten/ModDE), 
+We make use of ModDE (https://github.com/Dvermetten/ModDE) to run our experiments.
 The code used to generate the benchmark data can be found in the notebook 'Generate_DATA_BBOB.ipynb'. This file should be located in the same directory as the ModDe code during execution.
 
-The in-between results are made available as well, in the zenodo repository of this project. The folder 'BBOB-DE' contains the data from the benchmarking stage, in both raw IOH-format as well as processed rds-files generated with IOHanalyzer (these have also been made avaialbe on the IOHanalyzer GUI, when setting datasource to TIOBR). The R-notebook 'Process_BBOB.ipynb' shows the script used to generate the rds-files.
+The in-between results are made available as well, in the zenodo repository of this project. The folder 'BBOB-DE' contains the data from the benchmarking stage, in both raw IOH-format as well as processed rds-files generated with IOHanalyzer (these have also been made avaialbe on the IOHanalyzer GUI (https://iohanalyzer.liacs.nl/), when setting datasource to TIOBR). The R-notebook 'Process_BBOB.ipynb' shows the script used to generate the rds-files.
 
 ## Processing code for section 6:
-For the processing of benchmark data, IOHanalyzer is used (version 0.1.6.3). As mentioned previously, the processed data is avialable on zenodo and on the GUI. 
+For the processing of benchmark data, IOHanalyzer (https://github.com/IOHprofiler/IOHanalyzer) is used (version 0.1.6.3). As mentioned previously, the processed data is avialable on zenodo and on the GUI. 
 
 ## Presentation code for section 6:
 For the benchmark data, we make use of the standard GUI of IOHanalyzer (version 0.1.6.1). The multi-function plots are generated using the 'multi_function_layout.rds' settings, which can be uploaded in the 'settings' tab of IOHanalyzer. The ECDF plots use default settings, with target option set to 'bbob'. 
 
-For the POIS-based data (including the diversity), the notebook 'Visualize_BBOB' is used. This contains the functions needed to generate all plots based on the  rds files described in the previous section.
+For the POIS-based data (including the diversity), the notebook 'Visualize_BBOB.ipynb' is used. This contains the functions needed to generate all plots based on the  rds files described in the previous section.
 
 <!-- ## Pre-processing code for section 6:
 For the results shown in section 6, the code used to access the function-instances is IOHexperimenter, specifically version "ioh==0.3.2.4" used with python 3.8.10. All experimental conditions and scripts used for parameter settings are integrated directly in the algorithm code
@@ -72,7 +79,7 @@ For the benchmark data, we make use of the standard GUI of IOHanalyzer (version 
 
 For the POIS-based data (including the diversity), the notebook 'POIS_analysis' is used. This contains the functions needed to generate all plots based on the pickled dictionaries from the previous section.  -->
 
-## Citation information
+# Citation information
 
 Citation for the data and code:
 @dataset{diederick_vermetten_2022_5900706,
